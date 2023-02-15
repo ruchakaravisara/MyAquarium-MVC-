@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="775.0" prefWidth="1045.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.aquarium.controller.ManageCustomerPaymentFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="400.0" prefHeight="37.0" prefWidth="246.0" text="Customer Payment">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="145.0" layoutY="129.0" prefHeight="17.0" prefWidth="147.0" text="Payment ID">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtId" layoutX="163.0" layoutY="168.0" prefHeight="27.0" prefWidth="296.0" promptText="Payment Id" />
+      <Label alignment="CENTER" layoutX="586.0" layoutY="129.0" prefHeight="17.0" prefWidth="147.0" text=" Value">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtValue" layoutX="586.0" layoutY="168.0" prefHeight="27.0" prefWidth="296.0" promptText="Payment Value" />
+      <JFXButton buttonType="RAISED" layoutX="927.0" layoutY="154.0" onAction="#btnAddOnAction" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #56a3cc; -fx-background-radius: 20;" text="Add" textFill="#0f1010" />
+      <JFXButton buttonType="RAISED" layoutX="927.0" layoutY="202.0" onAction="#btnUpdateOnAction" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #56a3cc; -fx-background-radius: 20;" text="Update" textFill="#0f1010" />
+      <JFXButton buttonType="RAISED" layoutX="927.0" layoutY="297.0" onAction="#btnDeleteOnAction" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: red; -fx-background-radius: 20;" text="Delete" textFill="#111010" />
+      <JFXButton buttonType="RAISED" layoutX="927.0" layoutY="251.0" onAction="#btnSearchOnAction" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #56a3cc; -fx-background-radius: 20;" text="Search" textFill="#0f1010" />
+      <TableView fx:id="tableCustomerPayment" layoutX="311.0" layoutY="414.0" prefHeight="238.0" prefWidth="468.0">
+        <columns>
+          <TableColumn fx:id="colPaymentId" prefWidth="157.0" text="Payment Id" />
+          <TableColumn fx:id="colValue" prefWidth="161.0" text="Value" />
+            <TableColumn fx:id="colCusId" prefWidth="149.0" text="Customer Id" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="145.0" layoutY="218.0" prefHeight="17.0" prefWidth="147.0" text="Customer ID">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtcustomer" layoutX="163.0" layoutY="257.0" prefHeight="27.0" prefWidth="296.0" promptText="Customer Id" />
+   </children>
+</AnchorPane>

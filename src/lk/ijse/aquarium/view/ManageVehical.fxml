@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="775.0" prefWidth="1045.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.aquarium.controller.ManageVehicalController">
+   <children>
+      <Label layoutX="425.0" prefHeight="37.0" prefWidth="208.0" text="Manage Vehical">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="145.0" layoutY="129.0" prefHeight="17.0" prefWidth="147.0" text="Vehical ID">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtId" layoutX="163.0" layoutY="168.0" prefHeight="27.0" prefWidth="296.0" promptText="Vehical Id" />
+      <Label alignment="CENTER" layoutX="586.0" layoutY="129.0" prefHeight="17.0" prefWidth="147.0" text="Vehical Name">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtName" layoutX="586.0" layoutY="168.0" prefHeight="27.0" prefWidth="296.0" promptText="Vehical Name" />
+      <JFXButton buttonType="RAISED" layoutX="944.0" layoutY="155.0" onAction="#btnAddVehicalOnAction" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #56a3cc; -fx-background-radius: 20;" text="Add" textFill="#0f1010" />
+      <JFXButton buttonType="RAISED" layoutX="944.0" layoutY="203.0" onAction="#btnUpdateVehicalOnAction" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #56a3cc; -fx-background-radius: 20;" text="Update" textFill="#0f1010" />
+      <JFXButton buttonType="RAISED" layoutX="944.0" layoutY="298.0" onAction="#btnDeleteVehicalOnAction" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: red; -fx-background-radius: 20;" text="Delete" textFill="#111010" />
+      <JFXButton buttonType="RAISED" layoutX="944.0" layoutY="252.0" onAction="#btnSearchVehicalOnAction" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #56a3cc; -fx-background-radius: 20;" text="Search" textFill="#0f1010" />
+      <TableView fx:id="tblVehical" layoutX="307.0" layoutY="366.0" prefHeight="275.0" prefWidth="548.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="171.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="210.0" text="Name" />
+            <TableColumn fx:id="colEid" prefWidth="166.0" text="Employee ID" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="145.0" layoutY="233.0" prefHeight="17.0" prefWidth="147.0" text="Employee ID">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEid" layoutX="163.0" layoutY="272.0" prefHeight="27.0" prefWidth="296.0" promptText="Employee Id" />
+      <JFXButton buttonType="RAISED" layoutX="944.0" layoutY="102.0" onAction="#btnNewOnAction" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #56a3cc; -fx-background-radius: 20;" text="New" textFill="#0f1010" />
+   </children>
+</AnchorPane>

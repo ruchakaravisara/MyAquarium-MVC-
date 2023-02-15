@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CustomerReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e04d3729-a745-4d22-8d7e-096b1cd83b03">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="aquarium_Project"/>
+	<queryString language="SQL">
+		<![CDATA[select CPid,Cid,VALUE from customerPayment;]]>
+	</queryString>
+	<field name="CPid" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CPid"/>
+		<property name="com.jaspersoft.studio.field.label" value="CPid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customerpayment"/>
+	</field>
+	<field name="Cid" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Cid"/>
+		<property name="com.jaspersoft.studio.field.label" value="Cid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customerpayment"/>
+	</field>
+	<field name="VALUE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="VALUE"/>
+		<property name="com.jaspersoft.studio.field.label" value="VALUE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customerpayment"/>
+	</field>
+	<variable name="Totalvalue" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{VALUE}]]></variableExpression>
+	</variable>
+	<group name="CPid">
+		<groupExpression><![CDATA[$F{CPid}]]></groupExpression>
+	</group>
+	<group name="Cid">
+		<groupExpression><![CDATA[$F{Cid}]]></groupExpression>
+	</group>
+	<group name="VALUE">
+		<groupExpression><![CDATA[$F{VALUE}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="130" y="0" width="290" height="30" uuid="ddcf5aff-e9d0-4d20-88f4-1586e539291a"/>
+				<textElement textAlignment="Center">
+					<font size="24" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[CUSTOMERS PAYMENT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="-20" y="0" width="130" height="20" uuid="6a642fc4-0171-410a-b3d0-48d13f541e86"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="430" y="0" width="130" height="20" uuid="c574cd52-d550-4802-9f82-06af5620f3c2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="-1" width="100" height="21" uuid="3c7eb4d7-dda1-49eb-9ad6-5f49bd0c6082">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d760c4c3-d2b6-4c7d-9d37-5ef9af21f628"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#D8DFEB"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="16" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[CPid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="-1" width="100" height="21" uuid="3b87072c-0ecf-4f3c-b89f-3df289b1c952">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8f4da17-947b-4c93-9da2-995073cfbeea"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#D8DFEB"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="16" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Cid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="0" width="123" height="21" uuid="80dfc319-3d76-4dc4-83e0-6e4784f08b0b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3c20e542-75a2-4015-97f6-a3e37c031183"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#D8DFEB"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font size="16" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[VALUE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="1314dde3-7af2-4f2f-9b52-71d503fddfee">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d760c4c3-d2b6-4c7d-9d37-5ef9af21f628"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CPid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="100" height="30" uuid="0dc1bb44-619c-4544-8878-697571dbc144">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8f4da17-947b-4c93-9da2-995073cfbeea"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cid}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="430" y="0" width="100" height="30" uuid="e70c08d2-ac32-4623-9437-2c501207d7f0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3c20e542-75a2-4015-97f6-a3e37c031183"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VALUE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="54" splitType="Stretch">
+			<textField pattern="#,##0.###;(#,##0.###-)">
+				<reportElement x="420" y="24" width="123" height="30" uuid="7899cb36-ee15-43d2-b781-9d67d98ad6fd"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="false" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{Totalvalue}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="220" y="24" width="100" height="30" uuid="44e49feb-70cd-408c-a5c1-4bdeccd1e831"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

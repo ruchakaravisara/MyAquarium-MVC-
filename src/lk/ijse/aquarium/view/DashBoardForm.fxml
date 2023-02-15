@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.aquarium.controller.DashBoardFormController">
+   <children>
+      <AnchorPane layoutX="-15.0" layoutY="26.0" prefHeight="777.0" prefWidth="252.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="25.0" layoutY="20.0" onAction="#ManageEmpOnAction" prefHeight="32.0" prefWidth="206.0" style="-fx-background-color: #1f77d0; -fx-background-radius: 20;" text="Manage Employee" textFill="#f4f6f8">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="25.0" layoutY="81.0" onAction="#ManageSupplierOnAction" prefHeight="32.0" prefWidth="210.0" style="-fx-background-color: #1f77d0; -fx-background-radius: 20;" text="Manage Supplier" textFill="#f2f2f2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="23.0" layoutY="140.0" onAction="#ManageItemOnAction" prefHeight="32.0" prefWidth="218.0" style="-fx-background-color: #1f77d0; -fx-background-radius: 20;" text="Manage Items" textFill="#f3f4f5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="21.0" layoutY="196.0" onAction="#ManageCustomerOnAction" prefHeight="32.0" prefWidth="218.0" style="-fx-background-color: #1f77d0; -fx-background-radius: 20;" text="Manage Customer" textFill="#f3f4f5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="23.0" layoutY="246.0" onAction="#ManageVehicalOnAction" prefHeight="32.0" prefWidth="218.0" style="-fx-background-color: #1f77d0; -fx-background-radius: 20;" text="Manage Vehical" textFill="#f3f4f5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="298.0" onAction="#SuppllierPaymentOnAction" prefHeight="32.0" prefWidth="218.0" style="-fx-background-color: #1f77d0; -fx-background-radius: 20;" text="Manage Supplier Payments" textFill="#f3f4f5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="23.0" layoutY="349.0" onAction="#CustomerPaymentOnAction" prefHeight="32.0" prefWidth="218.0" style="-fx-background-color: #1f77d0; -fx-background-radius: 20;" text="Manage Customer Payments" textFill="#f2f2f2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="19.0" layoutY="404.0" onAction="#ManageDilivaryOnAction" prefHeight="32.0" prefWidth="218.0" style="-fx-background-color: #1f77d0; -fx-background-radius: 20;" text="Manage Dilivary" textFill="#f3f4f5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="21.0" layoutY="461.0" onAction="#ManageOrdersOnAction" prefHeight="32.0" prefWidth="218.0" style="-fx-background-color: #1f77d0; -fx-background-radius: 20;" text="Manage Orders" textFill="#f3f4f5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="21.0" layoutY="517.0" onAction="#ManageOrderDetailsOnAction" prefHeight="32.0" prefWidth="218.0" style="-fx-background-color: #1f77d0; -fx-background-radius: 20;" text="Place Order" textFill="#f3f4f5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="23.0" layoutY="572.0" onAction="#ManageSupplierDetailsOnAction" prefHeight="32.0" prefWidth="218.0" style="-fx-background-color: #1f77d0; -fx-background-radius: 20;" text="Supplier Details" textFill="#f3f5f8">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="23.0" layoutY="624.0" onAction="#ManageCustomerReportOnAction" prefHeight="32.0" prefWidth="218.0" style="-fx-background-color: #1f77d0; -fx-background-radius: 20;" text="Customer Report" textFill="#f5f5f5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="21.0" layoutY="675.0" onAction="#ManageSupplierReportOnAction" prefHeight="32.0" prefWidth="218.0" style="-fx-background-color: #1f77d0; -fx-background-radius: 20;" text="Supplier Report" textFill="#f3f4f5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="contex" layoutX="237.0" layoutY="29.0" prefHeight="775.0" prefWidth="1045.0">
+         <children>
+            <ImageView fitHeight="684.0" fitWidth="913.0" layoutX="67.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/Betttttta.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <Label fx:id="lblDate" layoutX="1054.0" layoutY="6.0" prefHeight="24.0" prefWidth="209.0" text="Date:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime1" layoutX="879.0" layoutY="6.0" prefHeight="24.0" prefWidth="154.0" text="Time:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

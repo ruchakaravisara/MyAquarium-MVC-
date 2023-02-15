@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="775.0" prefWidth="1045.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.aquarium.controller.ManageCustomerFormController">
+   <children>
+      <Label layoutX="406.0" text="Manage Customer">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="135.0" layoutY="119.0" prefHeight="17.0" prefWidth="147.0" text="Customer ID">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <JFXTextField fx:id="txtId" layoutX="153.0" layoutY="158.0" prefHeight="27.0" prefWidth="296.0" promptText="Customer Id" />
+      <Label alignment="CENTER" layoutX="576.0" layoutY="119.0" prefHeight="17.0" prefWidth="147.0" text="Customer Name">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtName" layoutX="576.0" layoutY="158.0" prefHeight="27.0" prefWidth="296.0" promptText="Customer Name" />
+      <Label alignment="CENTER" layoutX="153.0" layoutY="243.0" prefHeight="24.0" prefWidth="166.0" text="Customer Address">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAddress" layoutX="153.0" layoutY="295.0" prefHeight="27.0" prefWidth="296.0" promptText="Customer Address" />
+      <Label alignment="CENTER" layoutX="576.0" layoutY="243.0" prefHeight="24.0" prefWidth="166.0" text="Customer Contact">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtContact" layoutX="576.0" layoutY="295.0" prefHeight="27.0" prefWidth="296.0" promptText="Customer Contact" />
+      <JFXButton buttonType="RAISED" layoutX="934.0" layoutY="145.0" onAction="#btnAddOnAction" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #56a3cc; -fx-background-radius: 20;" text="Add" textFill="#0f1010" />
+      <JFXButton buttonType="RAISED" layoutX="934.0" layoutY="193.0" onAction="#btnUpdateOnAction" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #56a3cc; -fx-background-radius: 20;" text="Update" textFill="#0f1010" />
+      <JFXButton buttonType="RAISED" layoutX="934.0" layoutY="288.0" onAction="#btnDeleteOnAction" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: red; -fx-background-radius: 20;" text="Delete" textFill="#111010" />
+      <JFXButton buttonType="RAISED" layoutX="934.0" layoutY="242.0" onAction="#btnSearchOnAction" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #56a3cc; -fx-background-radius: 20;" text="Search" textFill="#0f1010" />
+      <TableView fx:id="tblCustomer" layoutX="191.0" layoutY="405.0" prefHeight="286.0" prefWidth="649.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="150.0" text=" ID" />
+          <TableColumn fx:id="colName" prefWidth="181.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="164.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="153.0" text="Contact" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="934.0" layoutY="78.0" onAction="#btnNewOnAction" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #56a3cc; -fx-background-radius: 20;" text="New" textFill="#0f1010" />
+   </children>
+</AnchorPane>
